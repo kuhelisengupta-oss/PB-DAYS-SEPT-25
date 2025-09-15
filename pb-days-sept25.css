@@ -49,34 +49,48 @@ div.wrapper {
     transition: opacity 0.8s ease-in-out;
     display: flex;
     align-items: center;
-    padding-left: 20px;
     box-sizing: border-box;
+    padding-left: 20px;
 }
 
 .carousel-item.active {
     opacity: 1;
 }
 
-/* ---------- Text Styling ---------- */
-div#cnt-carousel span {
-    font-size: 0.8em;
-    font-weight: 100;
-    line-height: 1.5em;
-    color: white;
+/* ---------- Text Container Inside Each Slide ---------- */
+.slide-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
 }
 
-div#cnt-carousel a {
-    position: absolute;
-    right: 10%;
-    top: 50%;
-    transform: translateY(-50%);
-    text-decoration: none;
-    background-color: white;
-    color: #823366;
-    padding: 6px 10px;
-    border-radius: 3px;
+/* Title Styling */
+.slide-title {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 4px;
+}
+
+/* Subtitle Styling */
+.slide-subtitle {
+    font-size: 0.9em;
+    font-weight: 300;
+    color: white;
+    margin-bottom: 8px;
+}
+
+/* Button Styling */
+.slide-button {
+    width: max-content;
+    padding: 6px 12px;
     font-size: 12px;
-    font-family: sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    color: #823366;
+    background-color: white;
+    border-radius: 3px;
 }
 
 /* ---------- Existing Footer Overrides ---------- */
