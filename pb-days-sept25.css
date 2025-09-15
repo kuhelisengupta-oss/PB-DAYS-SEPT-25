@@ -1,150 +1,66 @@
-/* ---------- Footer Wrapper ---------- */
-div.wrapper {
-    height: 136px !important;
-    background-color: transparent;
-    border-top: none;
-    border-color: rgba(202, 10, 10, 0);
-    position: relative;
-    overflow: hidden; /* Ensure slides don’t overflow */
+.pb-carousel {
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+  height: 140px;
+  margin: 0 auto;
+  overflow: hidden;
+  background: transparent;
+  z-index: 9999;
 }
 
-.wrapper:before {
-    content: '';
-    position: absolute;
-    top: 0px;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    height: 86px;
-    width: 100%;
-    background-size: 100% 86px !important;
-    z-index: 3222;
-    background-repeat: no-repeat !important;
+.pb-carousel input[type="radio"] {
+  display: none;
 }
 
-/* ---------- Carousel Background Images ---------- */
-#cnt-carousel .carousel-item:nth-child(1) {
-    background: url('https://cdn.jsdelivr.net/gh/kuhelisengupta-oss/PB-DAYS-SEPT-25@main/PBDAYSSEPT1.png') no-repeat center/cover;
-}
-#cnt-carousel .carousel-item:nth-child(2) {
-    background: url('https://cdn.jsdelivr.net/gh/kuhelisengupta-oss/PB-DAYS-SEPT-25@main/PBDAYSSEPT2.png') no-repeat center/cover;
-}
-#cnt-carousel .carousel-item:nth-child(3) {
-    background: url('https://cdn.jsdelivr.net/gh/kuhelisengupta-oss/PB-DAYS-SEPT-25@main/PBDAYSSEPT3.png') no-repeat center/cover;
+.pb-slides {
+  display: flex;
+  width: 300%;
+  height: 140px;
+  transition: transform 0.5s;
 }
 
-/* ---------- Carousel Slides ---------- */
-#cnt-carousel {
-    position: relative;
-    height: 86px; /* Adjust according to your image height */
+.pb-slide {
+  flex: 0 0 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 140px;
 }
 
-.carousel-item {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    transition: opacity 0.8s ease-in-out;
-    display: flex;
-    align-items: center;
-    box-sizing: border-box;
-    padding-left: 20px;
+.pb-slide img {
+  max-height: 120px;
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.09);
 }
 
-.carousel-item.active {
-    opacity: 1;
+#pb-slide1:checked ~ .pb-slides { transform: translateX(0%);}
+#pb-slide2:checked ~ .pb-slides { transform: translateX(-100%);}
+#pb-slide3:checked ~ .pb-slides { transform: translateX(-200%);}
+
+.pb-controls {
+  position: absolute;
+  bottom: 6px;
+  left: 0;
+  width: 100%;
+  text-align: center;
 }
 
-/* ---------- Text Container Inside Each Slide ---------- */
-.slide-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
+.pb-controls label {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 4px;
+  border-radius: 50%;
+  background: #ccc;
+  cursor: pointer;
+  transition: background 0.3s;
 }
 
-/* Title Styling */
-.slide-title {
-    font-size: 1.2em;
-    font-weight: 700;
-    color: white;
-    margin-bottom: 4px;
-}
-
-/* Subtitle Styling */
-.slide-subtitle {
-    font-size: 0.9em;
-    font-weight: 300;
-    color: white;
-    margin-bottom: 8px;
-}
-
-/* Button Styling */
-.slide-button {
-    width: max-content;
-    padding: 6px 12px;
-    font-size: 12px;
-    font-weight: 600;
-    text-decoration: none;
-    color: #823366;
-    background-color: white;
-    border-radius: 3px;
-}
-
-/* ---------- Existing Footer Overrides ---------- */
-.description-container {
-    background-color: #823366;
-    top: 56%;
-    position: absolute;
-    width: 101%;
-}
-
-.description {
-    padding-top: 20px !important;
-    color: #823366;
-}
-
-.close-action-container {
-    position: absolute;
-    bottom: 76px !important;
-    z-index: 9999999999 !important;
-}
-
-a {
-    color: transparent;
-}
-
-.svg-close-container {
-    display: none;
-    fill: transparent;
-    stroke: transparent;
-    stroke-width: 3px;
-}
-
-.close {
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-    position: relative;
-    bottom: -48px;
-    right: 23px;
-}
-
-.close-outer-container {
-    opacity: 1 !important;
-}
-
-.container {
-    border-color: transparent;
-}
-
-.powered-by {
-    display: none;
-}
-
-.content-table {
-    background: transparent;
-    background-image: none;
+#pb-slide1:checked ~ .pb-controls label[for="pb-slide1"],
+#pb-slide2:checked ~ .pb-controls label[for="pb-slide2"],
+#pb-slide3:checked ~ .pb-controls label[for="pb-slide3"] {
+  background: #823366;
 }
