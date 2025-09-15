@@ -1,3 +1,4 @@
+/* General container for carousel */
 .carousel-wrapper {
     position: relative;
     height: 136px !important;
@@ -6,6 +7,8 @@
     overflow: hidden;
     width: 100%;
 }
+
+/* Carousel slides common styles (opacity handled inline in HTML) */
 .carousel-slide {
     position: absolute;
     top: 0;
@@ -14,22 +17,11 @@
     width: 100%;
     background-size: 100% 86px !important;
     background-repeat: no-repeat !important;
-    opacity: 0;
     transition: opacity 0.7s ease;
     z-index: 3222;
 }
-.carousel-slide.slide1 {
-    background-image: url('https://cdn.jsdelivr.net/gh/kuhelisengupta-oss/PB-DAYS-SEPT-25/PBDAYSSEPT1.png?v=2c1021af5a290a1f40fa5314d98a78fc5664ecb8');
-}
-.carousel-slide.slide2 {
-    background-image: url('https://cdn.jsdelivr.net/gh/kuhelisengupta-oss/PB-DAYS-SEPT-25/PBDAYSSEPT2.png?v=2c1021af5a290a1f40fa5314d98a78fc5664ecb8');
-}
-.carousel-slide.slide3 {
-    background-image: url('https://cdn.jsdelivr.net/gh/kuhelisengupta-oss/PB-DAYS-SEPT-25/PBDAYSSEPT3.png?v=2c1021af5a290a1f40fa5314d98a78fc5664ecb8');
-}
-.carousel-slide.active {
-    opacity: 1;
-}
+
+/* Carousel dots container */
 .carousel-dots {
     position: absolute;
     left: 50%;
@@ -39,6 +31,8 @@
     gap: 6px;
     z-index: 5000;
 }
+
+/* Carousel dot styles */
 .carousel-dot {
     width: 8px;
     height: 8px;
@@ -47,11 +41,9 @@
     opacity: 0.5;
     cursor: pointer;
 }
-.carousel-dot.active {
-    opacity: 1;
-    background: #9b2c2d;
-}
-div#cnt, .description {
+
+/* Text content styles */
+div#cnt {
     text-align: left;
     font-family: sans-serif;
     color: white;
@@ -61,11 +53,13 @@ div#cnt, .description {
     padding-left: 0px;
     line-height: 16px;
 }
+
 div#cnt span {
     font-size: 0.8em;
     font-weight: 100;
     line-height: 1.5em;
 }
+
 div#cnt a {
     position: absolute;
     -webkit-font-smoothing: antialiased;
@@ -80,11 +74,17 @@ div#cnt a {
     font-size: 12px;
     font-family: sans-serif;
 }
-/* Hide default unwanted elements */
-.svg-close-container, .powered-by {
+
+/* Hide default unwanted WebEngage elements */
+.svg-close-container,
+.powered-by {
     display: none;
 }
-.close-action-container, .content-table, .container, .close-outer-container {
+
+.close-action-container,
+.content-table,
+.container,
+.close-outer-container {
     border-color: transparent;
     background: transparent;
     opacity: 1 !important;
