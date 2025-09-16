@@ -1,91 +1,46 @@
-/* General container for carousel */
-.carousel-wrapper {
-    position: relative;
-    height: 136px !important;
-    background: transparent;
-    border-top: none;
-    overflow: hidden;
-    width: 100%;
+#cnt {
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
-/* Carousel slides common styles (opacity handled inline in HTML) */
-.carousel-slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 86px;
-    width: 100%;
-    background-size: 100% 86px !important;
-    background-repeat: no-repeat !important;
-    transition: opacity 0.7s ease;
-    z-index: 3222;
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 957px;
+  margin: auto;
+  border-radius: 6px;
+  overflow: hidden;
 }
 
-/* Carousel dots container */
-.carousel-dots {
-    position: absolute;
-    left: 50%;
-    bottom: 10px;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 6px;
-    z-index: 5000;
+.carousel input { display: none; }
+
+.carousel img {
+  width: 100%;
+  display: none;
 }
 
-/* Carousel dot styles */
-.carousel-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: #fff;
-    opacity: 0.5;
-    cursor: pointer;
+#slide1:checked ~ .slides img:nth-child(1),
+#slide2:checked ~ .slides img:nth-child(2),
+#slide3:checked ~ .slides img:nth-child(3) {
+  display: block;
 }
 
-/* Text content styles */
-div#cnt {
-    text-align: left;
-    font-family: sans-serif;
-    color: white;
-    font-size: 1.1em;
-    -webkit-font-smoothing: antialiased;
-    font-weight: 400;
-    padding-left: 0px;
-    line-height: 16px;
+.dots {
+  text-align: center;
+  margin-top: 5px;
 }
-
-div#cnt span {
-    font-size: 0.8em;
-    font-weight: 100;
-    line-height: 1.5em;
+.dots label {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #ccc;
+  border-radius: 50%;
+  margin: 0 3px;
+  cursor: pointer;
 }
-
-div#cnt a {
-    position: absolute;
-    -webkit-font-smoothing: antialiased;
-    text-decoration: none;
-    background-color: white;
-    color: #9b2c2d;
-    right: 0px;
-    padding: 6px 10px;
-    margin-right: 10%;
-    margin-top: -14px;
-    border-radius: 3px;
-    font-size: 12px;
-    font-family: sans-serif;
-}
-
-/* Hide default unwanted WebEngage elements */
-.svg-close-container,
-.powered-by {
-    display: none;
-}
-
-.close-action-container,
-.content-table,
-.container,
-.close-outer-container {
-    border-color: transparent;
-    background: transparent;
-    opacity: 1 !important;
+#slide1:checked ~ .dots label[for="slide1"],
+#slide2:checked ~ .dots label[for="slide2"],
+#slide3:checked ~ .dots label[for="slide3"] {
+  background: #666;
 }
