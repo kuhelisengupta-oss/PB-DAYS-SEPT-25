@@ -17,7 +17,23 @@ div.wrapper {
     background-size: 100% 86px !important;
     z-index: 3222;
     background-repeat: no-repeat !important;
-    background: url('https://cdn.jsdelivr.net/gh/kuhelisengupta-oss/PB-DAYS-SEPT-25@main/quiz-banner-sized-new.gif');
+    background-image: url('https://email-editor-resources.s3.amazonaws.com/images/82618240/PBDAYS-SEP-CARASOUL/PBDAYSSEPT1.png');
+    animation: carousel-slide 9s infinite;
+}
+
+@keyframes carousel-slide {
+    0%, 30% {
+        background-image: url('https://email-editor-resources.s3.amazonaws.com/images/82618240/PBDAYS-SEP-CARASOUL/PBDAYSSEPT1.png');
+    }
+    33.33%, 63.33% {
+        background-image: url('https://email-editor-resources.s3.amazonaws.com/images/82618240/PBDAYS-SEP-CARASOUL/PBDAYSSEPT2.png');
+    }
+    66.66%, 96.66% {
+        background-image: url('https://email-editor-resources.s3.amazonaws.com/images/82618240/PBDAYS-SEP-CARASOUL/PBDAYSSEPT3.png');
+    }
+    100% {
+        background-image: url('https://email-editor-resources.s3.amazonaws.com/images/82618240/PBDAYS-SEP-CARASOUL/PBDAYSSEPT1.png');
+    }
 }
 
 .description-container {
@@ -26,6 +42,7 @@ div.wrapper {
     position: absolute;
     width: 101%;
 }
+
 .description {
     padding-top: 20px !important;
 }
@@ -34,35 +51,42 @@ div.wrapper {
     position: absolute;
     bottom: 76px !important;
 }
+
 a {
     color: transparent;
 }
+
 .svg-close-container {
     display: none;
 }
+
 .close {
     bottom: -47px;
 }
+
 .container {
     border-color: transparent;
 }
 
-.powered-by {
-    display: none;
+.powered-by{
+    display:none;
 }
 
 .content-table {
     background: transparent;
     background-image: none;
 }
+
 .close-action-container {
     z-index: 9999999999 !important;
 }
+
 .svg-close-container {
     fill: transparent;
     stroke: transparent;
     stroke-width: 3px;
 }
+
 .close {
     text-align: center;
     text-decoration: none;
@@ -71,6 +95,7 @@ a {
     bottom: -48px;
     right: 23px;
 }
+
 .close-outer-container {
     opacity: 1 !important;
 }
@@ -78,6 +103,7 @@ a {
 .description {
     color: #666666;
 }
+
 div#cnt {
     text-align: left;
     font-family: sans-serif;
@@ -88,11 +114,13 @@ div#cnt {
     padding-left: 0px;
     line-height: 16px;
 }
+
 div#cnt span {
     font-size: 0.8em;
     font-weight: 100;
     line-height: 1.5em;
 }
+
 div#cnt a {
     position: absolute;
     -webkit-font-smoothing: antialiased;
