@@ -1,46 +1,71 @@
-#cnt {
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
-
-.carousel {
+.wrapper {
+  height: 136px !important;
+  background-color: transparent;
+  border-top: none;
+  border-color: rgba(202, 10, 10, 0);
   position: relative;
+}
+.description-container {
+  background-color: #9b2c2d;
+  top: 56%;
+  position: absolute;
   width: 100%;
-  max-width: 957px;
-  margin: auto;
-  border-radius: 6px;
-  overflow: hidden;
+  padding-left: 0;
+  box-sizing: border-box;
+  color: white;
+  font-family: sans-serif;
 }
-
-.carousel input { display: none; }
-
-.carousel img {
-  width: 100%;
-  display: none;
+#cnt {
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  height: 160px;
+  line-height: 0;
+  -webkit-overflow-scrolling: touch;
+  margin-top: 8px;
+  padding-left: 0;
 }
-
-#slide1:checked ~ .slides img:nth-child(1),
-#slide2:checked ~ .slides img:nth-child(2),
-#slide3:checked ~ .slides img:nth-child(3) {
-  display: block;
+#cnt::-webkit-scrollbar {
+  height: 6px;
 }
-
-.dots {
-  text-align: center;
-  margin-top: 5px;
+#cnt::-webkit-scrollbar-thumb {
+  background: #9b2c2d;
+  border-radius: 3px;
 }
-.dots label {
+#cnt img {
+  height: 136px;
+  width: auto;
+  object-fit: contain;
   display: inline-block;
-  width: 10px;
-  height: 10px;
-  background: #ccc;
-  border-radius: 50%;
-  margin: 0 3px;
-  cursor: pointer;
+  margin-right: 10px;
+  vertical-align: middle;
+  border-radius: 4px;
 }
-#slide1:checked ~ .dots label[for="slide1"],
-#slide2:checked ~ .dots label[for="slide2"],
-#slide3:checked ~ .dots label[for="slide3"] {
-  background: #666;
+div#cnt {
+  text-align: left;
+  font-family: sans-serif;
+  color: white;
+  font-size: 1.1em;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 400;
+  padding-left: 0;
+  line-height: normal;
+  position: relative;
+}
+div#cnt span {
+  font-size: 0.8em;
+  font-weight: 100;
+  line-height: 1.5em;
+}
+div#cnt a {
+  position: absolute;
+  text-decoration: none;
+  background-color: white;
+  color: #9b2c2d;
+  right: 5%;
+  padding: 6px 10px;
+  margin-top: -14px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-family: sans-serif;
 }
