@@ -17,27 +17,27 @@ div.wrapper {
     background-size: 100% 86px !important;
     z-index: 3222;
     background-repeat: no-repeat !important;
-    background-image: url('https://email-editor-resources.s3.amazonaws.com/images/82618240/PBDAYS-SEP-CARASOUL/PBDAYSSEPT1.png');
+    background-image: url('https://email-editor-resources.s3.amazonaws.com/images/82618240/The-kind-of-prices1.png');
     animation: carousel-slide 9s infinite;
 }
 
 @keyframes carousel-slide {
     0%, 30% {
-        background-image: url('https://email-editor-resources.s3.amazonaws.com/images/82618240/PBDAYS-SEP-CARASOUL/PBDAYSSEPT1.png');
+        background-image: url('https://email-editor-resources.s3.amazonaws.com/images/82618240/The-kind-of-prices1.png');
     }
     33.33%, 63.33% {
-        background-image: url('https://email-editor-resources.s3.amazonaws.com/images/82618240/PBDAYS-SEP-CARASOUL/PBDAYSSEPT2.png');
+        background-image: url('https://email-editor-resources.s3.amazonaws.com/images/82618240/The-kind-of-prices2.png');
     }
     66.66%, 96.66% {
-        background-image: url('https://email-editor-resources.s3.amazonaws.com/images/82618240/PBDAYS-SEP-CARASOUL/PBDAYSSEPT3.png');
+        background-image: url('https://email-editor-resources.s3.amazonaws.com/images/82618240/The-kind-of-prices3.png');
     }
     100% {
-        background-image: url('https://email-editor-resources.s3.amazonaws.com/images/82618240/PBDAYS-SEP-CARASOUL/PBDAYSSEPT1.png');
+        background-image: url('https://email-editor-resources.s3.amazonaws.com/images/82618240/The-kind-of-prices1.png');
     }
 }
 
 .description-container {
-    background-color: #9b2c2d;
+    background-color: #bd11ac;
     top: 56%;
     position: absolute;
     width: 101%;
@@ -126,7 +126,7 @@ div#cnt a {
     -webkit-font-smoothing: antialiased;
     text-decoration: none;
     background-color: white;
-    color: #9b2c2d;
+    color: #bd11ac;
     right: 0px;
     padding: 6px 10px;
     margin-right: 10%;
@@ -135,3 +135,4 @@ div#cnt a {
     font-size: 12px;
     font-family: sans-serif;
 }
+
